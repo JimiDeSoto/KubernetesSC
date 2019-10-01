@@ -1,7 +1,8 @@
 FROM alpine:3.10.2
 
-#Update
-RUN apk add --update nodejs
+#Update & install
+RUN apk update  \
+    && apk add nodejs nodejs-npm
 
 #App dep
 WORKDIR /app/
